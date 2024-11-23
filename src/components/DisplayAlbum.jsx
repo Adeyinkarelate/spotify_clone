@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
+import Navbar from "./Navbar";
+import { useParams } from "react-router-dom";
+import { albumsData } from "../assets/assets";
 
 const DisplayAlbum = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+    const {id} = useParams()
+    const albumData = albumsData[id]
+  return (
+    
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default DisplayAlbum;
